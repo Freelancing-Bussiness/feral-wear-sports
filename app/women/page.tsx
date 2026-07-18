@@ -1,0 +1,1 @@
+export const metadata={title:"Women's Gym Wear | FERAL Wear",description:"Explore FERAL women's tops, sports bras, leggings and modest performance wear."};import CategoryLanding from "../components/CategoryLanding";import {sectionBySlug} from "../commerce-navigation";export default function Page(){return <CategoryLanding section={sectionBySlug("women")!}/>}

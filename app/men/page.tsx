@@ -1,0 +1,1 @@
+export const metadata={title:"Men's Gym Wear | FERAL Wear",description:"Shop FERAL men's tops, shorts, trousers and compression layers."};import CategoryLanding from "../components/CategoryLanding";import {sectionBySlug} from "../commerce-navigation";export default function Page(){return <CategoryLanding section={sectionBySlug("men")!}/>}

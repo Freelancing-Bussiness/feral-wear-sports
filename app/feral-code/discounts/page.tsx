@@ -1,0 +1,3 @@
+import FeatureLanding from "../../components/FeatureLanding";
+export const metadata={title:"FERAL Member Discounts",description:"Explore planned FERAL member, team and volume discounts."};
+export default function Page(){const items=[{number:"01",title:"Member Access",text:"Early-access and selected launch offers."},{number:"02",title:"Team Orders",text:"Volume pricing for verified clubs and teams.",href:"/b2b"},{number:"03",title:"Bundle Value",text:"Planned outfit and nutrition bundle savings."}];return <FeatureLanding eyebrow="FERAL CODE / DISCOUNTS" title="MORE WORK. MORE VALUE." description="Planned offers are separated by eligibility so pricing remains clear." items={items} accent="dark"/>}

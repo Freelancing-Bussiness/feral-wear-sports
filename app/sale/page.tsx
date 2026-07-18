@@ -1,0 +1,1 @@
+export const metadata={title:"Sportswear Sale | FERAL Wear",description:"Shop selected FERAL performance wear at reduced prototype prices."};import CategoryLanding from "../components/CategoryLanding";import {sectionBySlug} from "../commerce-navigation";export default function Page(){return <CategoryLanding section={sectionBySlug("sale")!}/>}

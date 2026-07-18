@@ -1,0 +1,1 @@
+export const metadata={title:"Gym & Teamwear B2B | FERAL Wear",description:"FERAL wholesale, teamwear and corporate wellness partnership enquiries."};import CategoryLanding from "../components/CategoryLanding";import {sectionBySlug} from "../commerce-navigation";export default function Page(){return <CategoryLanding section={sectionBySlug("b2b")!}/>}

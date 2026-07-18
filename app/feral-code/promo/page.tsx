@@ -1,0 +1,3 @@
+import FeatureLanding from "../../components/FeatureLanding";
+export const metadata={title:"FERAL Promo Codes",description:"View prototype FERAL Wear promotional codes and their planned terms."};
+export default function Page(){const items=[{number:"FERAL10",title:"Welcome Offer",text:"Planned 10% first-order discount, subject to final terms."},{number:"TEAM15",title:"Team Order",text:"Planned team-order offer after quantity verification."},{number:"HEAT10",title:"Heat System",text:"Planned selected sauna-system promotion."}];return <FeatureLanding eyebrow="FERAL CODE / PROMOS" title="CURRENT CODES." description="Prototype codes for interface testing; checkout enforcement and final terms will be connected before launch." items={items} accent="dark"/>}

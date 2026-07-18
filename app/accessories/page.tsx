@@ -1,0 +1,1 @@
+export const metadata={title:"Gym Accessories | FERAL Wear",description:"Shop FERAL bags, caps, gloves, socks, shakers and lifting accessories."};import CategoryLanding from "../components/CategoryLanding";import {sectionBySlug} from "../commerce-navigation";export default function Page(){return <CategoryLanding section={sectionBySlug("accessories")!}/>}

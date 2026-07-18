@@ -1,0 +1,1 @@
+export const metadata={title:"Sports Nutrition | FERAL Wear",description:"Explore FERAL protein, creatine and practical nutrition guidance."};import CategoryLanding from "../components/CategoryLanding";import {sectionBySlug} from "../commerce-navigation";export default function Page(){return <CategoryLanding section={sectionBySlug("nutrition-store")!}/>}

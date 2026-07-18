@@ -1,6 +1,8 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
+import CommerceNav from "./components/CommerceNav";
+import HeroSlider from "./components/HeroSlider";
 
 type Category = "All" | "Wear" | "Supplements";
 
@@ -16,7 +18,6 @@ const money = new Intl.NumberFormat("en-PK", { style: "currency", currency: "PKR
 export default function Home() {
   const [active, setActive] = useState<Category>("All");
   const [cartCount, setCartCount] = useState(0);
-  const [menuOpen, setMenuOpen] = useState(false);
   const [message, setMessage] = useState("");
   const visible = useMemo(() => products.filter((item) => active === "All" || item.category === active), [active]);
 
@@ -30,27 +31,22 @@ export default function Home() {
   return (
     <main>
       <div className="announcement">FREE DELIVERY OVER PKR 15,000 <span>•</span> BUILT FOR THE RELENTLESS</div>
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="FERAL Wear home"><img src="/feral-logo.png" alt="FERAL Wear" /></a>
-        <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="main-nav">{menuOpen ? "CLOSE" : "MENU"}</button>
-        <nav id="main-nav" className={menuOpen ? "nav open" : "nav"} aria-label="Main navigation">
-          <a href="#shop">Shop</a><a href="#categories">Collections</a><a href="#nutrition">Nutrition</a><a href="#story">Our code</a>
-        </nav>
-        <div className="header-actions"><button aria-label="Search">SEARCH</button><button aria-label={`Shopping bag with ${cartCount} items`}>BAG <b>{String(cartCount).padStart(2, "0")}</b></button></div>
-      </header>
+      <CommerceNav cartCount={cartCount}/>
 
-      <section className="hero" id="top">
+      <HeroSlider />
+
+      {false && (<section className="hero" id="top">
         <div className="hero-media" role="img" aria-label="Athlete training in a dark gym" />
         <div className="hero-scrim" />
         <div className="hero-copy">
           <p className="eyebrow"><span /> Drop 01 / Forged in motion</p>
           <h1>UNLOCK<br />YOUR <i>FERAL.</i></h1>
           <p className="hero-lede">Performance essentials for the hours nobody sees. Engineered to move. Built to endure.</p>
-          <div className="hero-cta"><a className="button primary" href="#shop">Shop the drop <span>↗</span></a><a className="text-link" href="#nutrition">Explore nutrition <span>→</span></a></div>
+          <div className="hero-cta"><a className="button primary" href="/shop">Shop the drop <span>↗</span></a><a className="text-link" href="/nutrition">Explore nutrition <span>→</span></a></div>
         </div>
         <div className="hero-index"><span>01</span><div /><small>03</small></div>
         <p className="vertical-note">FERAL PERFORMANCE SYSTEMS / 2026</p>
-      </section>
+      </section>)}
 
       <section className="proof" aria-label="Brand benefits">
         <div><strong>48H</strong><span>Dispatch target</span></div><div><strong>4-WAY</strong><span>Performance stretch</span></div><div><strong>30D</strong><span>Easy returns</span></div><div><strong>100%</strong><span>Focused formulas</span></div>

@@ -1,0 +1,1 @@
+export const metadata={title:"Kids Sportswear | FERAL Wear",description:"Durable FERAL active essentials for boys and girls."};import CategoryLanding from "../components/CategoryLanding";import {sectionBySlug} from "../commerce-navigation";export default function Page(){return <CategoryLanding section={sectionBySlug("kids")!}/>}
